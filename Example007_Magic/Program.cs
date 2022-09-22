@@ -1,7 +1,6 @@
-﻿// Console.Clear();
-// Console.SetCursorPosition(10, 4);
-// Console.WriteLine("*");
-
+﻿// Получение магического треугольника
+// Нахождение середины отрезка
+// Цикл
 Console.Clear();
 int xa = 1, ya = 26,
 xb = 40, yb = 1,
@@ -33,4 +32,4 @@ while (count < 4000) {
     Console.WriteLine("*");
     count++;
 }
-Console.ReadKey();
+Console.ReadKey(); // Завершение после нажатия любой клавиши

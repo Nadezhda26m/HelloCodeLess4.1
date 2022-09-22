@@ -1,6 +1,8 @@
-﻿Console.Write("Введите имя пользователя: ");
+﻿// Персональное приветствие для Маши
+Console.Clear();
+Console.Write("Введите имя пользователя: ");
 string username = Console.ReadLine();
-if(username.ToLower() == "маша")
+if(username.ToLower() == "маша") // возвращает введенный текст в нижнем регистре
 {
     Console.Write("Ура, это же МАША!");
 }
