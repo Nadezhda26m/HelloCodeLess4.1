@@ -33,3 +33,4 @@ while (count < 4000) {
     Console.WriteLine("*");
     count++;
 }
+Console.ReadKey();
