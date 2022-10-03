@@ -3,6 +3,13 @@
 Console.Clear();
 int[] arr = { 1, 5, 4, 3, 2, 6, 7, 1, 1 };
 
+// Методы
+// 1. Метод распечатывания массива
+// 2. Метод упорядочивания массива от min до max
+// 3. Метод упорядочивания массива от max до min
+
+#region Methods  
+
 // Метод распечатывания массива
 void PrintArray(int[] array)
 {
@@ -16,7 +23,7 @@ void PrintArray(int[] array)
 
 // Метод упорядочивания массива от min до max
 
-void SelectionSort(int[] array)
+void SelectionSortIncrease(int[] array)
 {
     int count = array.Length;
     for (int i = 0; i < count - 1; i++)
@@ -32,6 +39,28 @@ void SelectionSort(int[] array)
     }
 }
 
+// Метод упорядочивания массива от max до min
+
+void SelectionSortDecrease(int[] array)
+{
+    int count = array.Length;
+    for (int i = 0; i < count - 1; i++)
+    {
+        int maxPosition = i;
+        for (int j = i + 1; j < count; j++)
+        {
+            if (array[j] > array[maxPosition]) maxPosition = j;
+        }
+        int temporary = array[i];
+        array[i] = array[maxPosition];
+        array[maxPosition] = temporary;
+    }
+}
+
+#endregion
+
 PrintArray(arr);
-SelectionSort(arr);
+SelectionSortIncrease(arr);
+PrintArray(arr);
+SelectionSortDecrease(arr);
 PrintArray(arr);
